@@ -1,13 +1,18 @@
+import Header from "@/components/common/header/Header";
 import { Html, Head, Main, NextScript } from "next/document";
+import React from "react";
 
-export default function Document() {
+const _document = () => {
   return (
-    <Html lang="ko">
+    <Html>
       <Head />
       <body>
+        <Header />
         <Main />
         <NextScript />
       </body>
     </Html>
   );
-}
+};
+
+export default _document;
