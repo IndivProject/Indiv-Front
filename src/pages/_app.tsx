@@ -6,7 +6,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <div className="MainFormContents">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

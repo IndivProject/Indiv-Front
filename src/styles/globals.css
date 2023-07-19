@@ -10,3 +10,8 @@
     "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
     "Malgun Gothic", sans-serif; */
 }
+
+.MainFormContents {
+  width: 60%;
+  margin: auto;
+}
