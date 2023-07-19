@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import * as S from "./Header.style";
-import Link from "next/link";
 
 const Header = () => {
   const [isSignIn, setIsSignIn] = useState<boolean>(false);
