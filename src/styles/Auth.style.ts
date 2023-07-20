@@ -9,3 +9,10 @@ export const MainAuthForm = styled.div`
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 `;
+
+export const AuthTitleContext = styled.p`
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 7rem 0rem 2rem 0rem;
+  text-align: center;
+`;
