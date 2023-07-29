@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainAuthForm = styled.div`
   margin: auto;
   margin-top: 5rem;
-  width: 50%;
+  width: 30%;
   height: 40rem;
   padding: 1rem;
   border-radius: 5px;
