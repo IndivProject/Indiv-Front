@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const MainAuthForm = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: auto;
   margin-top: 5rem;
   width: 30%;
@@ -11,8 +15,7 @@ export const MainAuthForm = styled.div`
 `;
 
 export const AuthTitleContext = styled.p`
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 500;
-  margin: 7rem 0rem 2rem 0rem;
-  text-align: center;
+  margin: 0.5rem 0rem 2rem 0rem;
 `;
