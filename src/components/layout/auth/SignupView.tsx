@@ -1,11 +1,13 @@
 import AuthInput from "@/components/common/auth/AuthInput";
 import React, { ChangeEvent, useState } from "react";
+import IndivLogo from "@/asset/IndivLogo.svg";
+import Image from "next/image";
 
 type NewUserKey = "userId" | "userPassword" | "userPasswordCheck" | "userName";
 
 type NewRecordUser = Record<NewUserKey, string>;
 
-const SignupView = () => {
+const SignupView = ({ children }: { children: React.ReactElement }) => {
   const [newUserInfo, setNewUserInfo] = useState<NewRecordUser>({
     userId: "",
     userPassword: "",
@@ -30,6 +32,8 @@ const SignupView = () => {
 
   return (
     <>
+      <Image src={IndivLogo} alt="" />
+      {children}
       <AuthInput
         title="아이디"
         type="text"
