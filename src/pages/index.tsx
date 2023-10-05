@@ -1,4 +1,4 @@
-import MainView from "@/components/layout/main/MainView";
+import MainView from "@/components/layout/main";
 
 export default function Home() {
   return <MainView />;
