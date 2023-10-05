@@ -10,10 +10,15 @@ interface ICheckSignInProps {
 const AuthView = (props: ICheckSignInProps) => {
   return (
     <S.MainAuthForm>
-      <S.AuthTitleContext>
-        {props.isSignIn ? "로그인" : "회원 가입"}
-      </S.AuthTitleContext>
-      {props.isSignIn ? <SigninView /> : <SignupView />}
+      {props.isSignIn ? (
+        <SigninView>
+          <S.AuthTitleContext>모든 작가님들의 공간</S.AuthTitleContext>
+        </SigninView>
+      ) : (
+        <SignupView>
+          <S.AuthTitleContext>모든 작가님들의 공간</S.AuthTitleContext>
+        </SignupView>
+      )}
     </S.MainAuthForm>
   );
 };
