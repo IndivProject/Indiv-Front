@@ -4,12 +4,7 @@ import * as S from "./style";
 import React from "react";
 
 const MainView = () => {
-  return (
-    <S.MainFormContents>
-      <Search />
-      <Post />
-    </S.MainFormContents>
-  );
+  return <></>;
 };
 
 export default MainView;
