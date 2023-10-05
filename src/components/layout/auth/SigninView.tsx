@@ -22,14 +22,12 @@ const SigninView = () => {
   return (
     <>
       <AuthInput
-        title="아아디"
         type="text"
         placeholder="아이디를 입력해주세요."
         value={userInfo.userId}
         changeValueHandler={ChangeUserIdHandler}
       />
       <AuthInput
-        title="비밀번호"
         type="password"
         placeholder="비밀번호를 입력해주세요."
         value={userInfo.userPassword}
