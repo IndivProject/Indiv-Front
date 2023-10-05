@@ -1,8 +1,7 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, InputHTMLAttributes } from "react";
 import * as S from "./AuthInput.style";
 
-interface IInputProps {
-  title: string;
+interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   type: string;
   placeholder: string;
   changeValueHandler: (
@@ -11,15 +10,21 @@ interface IInputProps {
   value: string;
 }
 
-const AuthInput = (props: IInputProps) => {
+const AuthInput = ({
+  type,
+  placeholder,
+  changeValueHandler,
+  value,
+  ...props
+}: IInputProps) => {
   return (
     <S.MainInputContainer>
-      <S.InputTitle>{props.title}</S.InputTitle>
       <S.InputElement
-        type={props.type}
-        placeholder={props.placeholder}
-        value={props.value}
-        onChange={props.changeValueHandler}
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={changeValueHandler}
+        {...props}
       />
     </S.MainInputContainer>
   );
