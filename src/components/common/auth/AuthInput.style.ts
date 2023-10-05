@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 export const MainInputContainer = styled.div`
-  width: 60%;
-  padding: 0% 20%;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 `;
 
 export const InputElement = styled.input`
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 0.8rem;
+  width: 300px;
+  max-width: 300px;
+  padding: 0.75rem 0.9rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid ${({ theme }) => theme.Gray300};
+  color: ${({ theme }) => theme.Gray500};
+  border-radius: 10px;
+
+  &::placeholder {
+    color: ${({ theme }) => theme.Gray300};
+  }
 `;
 
 export const InputTitle = styled.p`
