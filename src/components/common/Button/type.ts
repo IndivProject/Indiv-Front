@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes } from "react";
 
-export type ButtonColorType = "unActive" | "Active" | "empty";
+export type ButtonColorType = "unActive" | "Active" | "Hover" | "empty";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   clickEvent?: React.MouseEventHandler<HTMLButtonElement>;
@@ -10,4 +10,5 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   width?: string | null;
   height?: string | null;
   color?: ButtonColorType;
+  padding?: string | null;
 }
