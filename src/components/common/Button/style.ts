@@ -11,8 +11,12 @@ const getColor: Record<
     background-color: ${({ theme }) => theme.PersonalGreen200};
     color: white;
   `,
-  Active: css`
+  Hover: css`
     background-color: ${({ theme }) => theme.PersonalGreen300};
+    color: white;
+  `,
+  Active: css`
+    background-color: ${({ theme }) => theme.PersonalGreen500};
     color: white;
   `,
   empty: css`
@@ -34,8 +38,12 @@ export const SubmitBtn = styled.button<IButtonProps>`
   justify-content: center;
   align-items: center;
   border-radius: ${({ radius }) => radius};
+  padding: ${({ padding }) => padding};
   border: none;
   &:hover {
+    ${({ hover }) => hover && getColor["Hover"]}
+  }
+  &:active {
     ${({ hover }) => hover && getColor["Active"]}
   }
 `;
