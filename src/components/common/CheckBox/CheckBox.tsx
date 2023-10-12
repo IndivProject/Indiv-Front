@@ -5,12 +5,20 @@ import { CheckBoxIcon } from "./style";
 interface ICheckBoxStyle {
   state: boolean;
   setState: Dispatch<SetStateAction<boolean>>;
+  setAllTOSState?: Dispatch<SetStateAction<boolean>>;
 }
 
-const CheckBox = ({ state, setState }: ICheckBoxStyle) => {
+const CheckBox = ({ state, setState, setAllTOSState }: ICheckBoxStyle) => {
   if (state)
     return (
-      <CheckBoxIcon src={Active} alt="dfdf" onClick={() => setState(false)} />
+      <CheckBoxIcon
+        src={Active}
+        alt="dfdf"
+        onClick={() => {
+          setState(false);
+          if (setAllTOSState) setAllTOSState(false);
+        }}
+      />
     );
   else
     return (
