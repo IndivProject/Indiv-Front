@@ -1,8 +1,6 @@
 import Button from "@/components/common/Button";
 import AuthInput from "@/components/common/auth/AuthInput";
 import React, { ChangeEvent, useState } from "react";
-import IndivLogo from "@/../public/asset/IndivLogo.svg";
-import Image from "next/image";
 
 type UserKey = "userId" | "userPassword";
 
@@ -24,7 +22,6 @@ const SigninView = ({ children }: { children: React.ReactElement }) => {
 
   return (
     <>
-      <Image src={IndivLogo} alt="" />
       {children}
       <AuthInput
         type="text"
@@ -41,6 +38,8 @@ const SigninView = ({ children }: { children: React.ReactElement }) => {
       <Button radius="10px" hover active width="200px" height="40px">
         로그인
       </Button>
+      <p>계정이 없으신가요?</p>
+      <p>비밀번호를 잊어버리셨나요?</p>
     </>
   );
 };
