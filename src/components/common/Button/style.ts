@@ -44,6 +44,6 @@ export const SubmitBtn = styled.button<IButtonProps>`
     ${({ hover }) => hover && getColor["Hover"]}
   }
   &:active {
-    ${({ hover }) => hover && getColor["Active"]}
+    ${({ active }) => active && getColor["Active"]}
   }
 `;

@@ -5,6 +5,7 @@ import { IButtonProps } from "./type";
 const Button = ({
   clickEvent,
   hover,
+  active,
   width,
   height,
   radius,

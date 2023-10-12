@@ -38,7 +38,7 @@ const SigninView = ({ children }: { children: React.ReactElement }) => {
         value={userInfo.userPassword}
         changeValueHandler={ChangeUserPasswordHandler}
       />
-      <Button radius="10px" hover width="200px" height="40px">
+      <Button radius="10px" hover active width="200px" height="40px">
         로그인
       </Button>
     </>
