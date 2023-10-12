@@ -1,7 +1,7 @@
-import Button from "@/components/common/Button/Submit";
+import Button from "@/components/common/Button";
 import AuthInput from "@/components/common/auth/AuthInput";
 import React, { ChangeEvent, useState } from "react";
-import IndivLogo from "@/asset/IndivLogo.svg";
+import IndivLogo from "@/../public/asset/IndivLogo.svg";
 import Image from "next/image";
 
 type UserKey = "userId" | "userPassword";

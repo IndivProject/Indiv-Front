@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import IndivLogo from "@/asset/IndivLogo.svg";
 import * as S from "./Header.style";
 
 const Header = () => {
