@@ -1,4 +1,4 @@
-import React, { ChangeEvent, InputHTMLAttributes } from "react";
+import React, { ChangeEvent, InputHTMLAttributes, ReactElement } from "react";
 import * as S from "./AuthInput.style";
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -8,6 +8,8 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     inputOnchangeValue: ChangeEvent<HTMLInputElement>
   ) => void;
   value: string;
+  width?: string;
+  children?: ReactElement;
 }
 
 const AuthInput = ({
@@ -15,10 +17,12 @@ const AuthInput = ({
   placeholder,
   changeValueHandler,
   value,
+  children,
+  width,
   ...props
 }: IInputProps) => {
   return (
-    <S.MainInputContainer>
+    <S.MainInputContainer width={width}>
       <S.InputElement
         type={type}
         placeholder={placeholder}
@@ -26,6 +30,7 @@ const AuthInput = ({
         onChange={changeValueHandler}
         {...props}
       />
+      {children}
     </S.MainInputContainer>
   );
 };
