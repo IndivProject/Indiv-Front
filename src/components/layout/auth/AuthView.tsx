@@ -4,13 +4,14 @@ import SigninView from "./SigninView";
 import SignupView from "./SignupView";
 import IndivLogo from "@/../public/asset/IndivLogo.svg";
 import Image from "next/image";
+import AuthTemplate from "@/components/common/Template/AuthTemplate/AuthTemplate";
 interface ICheckSignInProps {
   isSignIn: boolean;
 }
 
 const AuthView = (props: ICheckSignInProps) => {
   return (
-    <S.MainAuthForm>
+    <AuthTemplate>
       {props.isSignIn ? (
         <SigninView>
           <>
@@ -26,7 +27,7 @@ const AuthView = (props: ICheckSignInProps) => {
           </>
         </SignupView>
       )}
-    </S.MainAuthForm>
+    </AuthTemplate>
   );
 };
 
