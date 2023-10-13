@@ -13,6 +13,7 @@ export const MainContainer = styled.div`
 export const CheckBoxContainer = styled.div`
   display: flex;
   align-items: center;
+  margin: ${({ margin }: ICheckBoxContentsStlyeProps) => margin};
 `;
 export const CheckBoxContentsContainer = styled.div`
   display: flex;

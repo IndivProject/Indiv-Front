@@ -1,6 +1,7 @@
 import CheckBox from "@/components/common/CheckBox";
 import React, { useEffect, useState } from "react";
 import * as S from "./style";
+import Button from "@/components/common/Button";
 
 const Chapter1 = () => {
   const [checkAlTOS, setCheckAllTOS] = useState<boolean>(false);
@@ -27,8 +28,8 @@ const Chapter1 = () => {
   }, [checkUseService, checkUserInfo, checkUseUserYear, checkContact]);
   return (
     <S.MainContainer>
-      <S.CheckBoxContainer>
-        <S.CheckBoxContext margin="0rem 1rem 0rem 0rem">
+      <S.CheckBoxContainer margin="0rem 0rem 1rem 0rem">
+        <S.CheckBoxContext margin="0rem 1rem 0rem 1rem">
           모두 동의
         </S.CheckBoxContext>
         <CheckBox state={checkAlTOS} setState={setCheckAllTOS} />
@@ -70,16 +71,21 @@ const Chapter1 = () => {
         </S.CheckBoxContainer>
       </S.CheckBoxContentsContainer>
       <S.Line />
-      <S.CheckBoxContainer>
-        <CheckBox
-          state={checkAlTOS ? true : checkContact}
-          setState={setCheckContact}
-          setAllTOSState={setCheckAllTOS}
-        />
-        <S.CheckBoxContext margin="0rem 0rem 0rem 1rem">
-          다양한 소식을 받으시겠습니까?
-        </S.CheckBoxContext>
-      </S.CheckBoxContainer>
+      <S.CheckBoxContentsContainer>
+        <S.CheckBoxContainer margin="0rem 0rem 2rem 0rem">
+          <CheckBox
+            state={checkAlTOS ? true : checkContact}
+            setState={setCheckContact}
+            setAllTOSState={setCheckAllTOS}
+          />
+          <S.CheckBoxContext margin="0rem 0rem 0rem 1rem">
+            다양한 소식을 받으시겠습니까?
+          </S.CheckBoxContext>
+        </S.CheckBoxContainer>
+      </S.CheckBoxContentsContainer>
+      <Button padding="1rem" width="200px" hover radius="10px" margin="auto">
+        다음
+      </Button>
     </S.MainContainer>
   );
 };
