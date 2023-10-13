@@ -17,9 +17,7 @@ export const MainHeader = styled.header`
 `;
 
 export const Logo = styled(Link)`
-  font-size: 1.2rem;
-  font-weight: 600;
-  ${LinkInitialization}
+  ${LinkInitialization};
 `;
 
 export const CotentsWrap = styled.div`
