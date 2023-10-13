@@ -9,7 +9,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        <Header />
         <Component {...pageProps} />
       </RecoilRoot>
     </ThemeProvider>
