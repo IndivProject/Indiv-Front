@@ -27,6 +27,7 @@ const getColor: Record<
 };
 
 export const SubmitBtn = styled.button<IButtonProps>`
+  cursor: pointer;
   ${({ color }) => color && getColor[color]};
   width: ${({ width }) => width};
   max-width: ${({ width }) => width};
@@ -39,6 +40,7 @@ export const SubmitBtn = styled.button<IButtonProps>`
   align-items: center;
   border-radius: ${({ radius }) => radius};
   padding: ${({ padding }) => padding};
+  margin: ${({ margin }) => margin};
   border: none;
   &:hover {
     ${({ hover }) => hover && getColor["Hover"]}

@@ -10,6 +10,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disable?: boolean;
   width?: string | null;
   height?: string | null;
+  margin?: string | null;
   color?: ButtonColorType;
   padding?: string | null;
 }

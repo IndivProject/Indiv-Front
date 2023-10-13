@@ -12,6 +12,7 @@ const Button = ({
   disable,
   color,
   padding,
+  margin,
   children,
   ...buttonProps
 }: IButtonProps) => {
@@ -21,6 +22,7 @@ const Button = ({
       height={height}
       hover={hover}
       radius={radius}
+      margin={margin}
       padding={padding}
       color={color ? color : "unActive"}
       onClick={disable ? undefined : clickEvent}
